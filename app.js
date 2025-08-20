@@ -1,8 +1,10 @@
 const bells = new Audio('./sounds/bell.wav'); 
 const startBtn = document.querySelector('.btn-start'); 
+const resetBtn = document.querySelector('.btn-reset'); 
 const session = document.querySelector('.minutes'); 
 let myInterval; 
 let state = true;
+let totalSeconds; 
 
 const appTimer = () => {
   const sessionAmount = Number.parseInt(session.textContent)
@@ -41,4 +43,13 @@ const appTimer = () => {
     alert('Session has already started.')
   }
 }
+
+const resetTimer = () => {
+  clearInterval(myInterval); 
+  document.querySelector('.minutes').textContent = "25";
+  document.querySelector('.seconds').textContent = "00";
+  state = true; 
+};
+
  startBtn.addEventListener('click', appTimer);
+ resetBtn.addEventListener('click', resetTimer);
