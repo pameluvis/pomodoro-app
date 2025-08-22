@@ -1,104 +1,55 @@
-html {
+body {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 20px;
-  letter-spacing: 0.8px;
-  min-height: 100vh;
-  color: #d8e9ef;
-  background-image: linear-gradient(-20deg, #025159 0%, #733b36 100%);
-  background-size: cover;
-}
-
-h1 {
-  margin: 0 auto 10px auto;
-  color: #d8e9ef;
-}
-
-p {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-}
-
-.app-message {
-  height: 20px;
-  margin: 10px auto 20px auto;
+  color: #333;
 }
 
 .app-container {
-  width: 250px;
-  height: 420px;
-  margin: 40px auto;
   text-align: center;
-  border-radius: 5px;
-  padding: 20px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 300px;
 }
 
-.app-circle {
-  position: relative;
-  margin: 0 auto;
-  width: 200px;
-  height: 200px;
-}
-
-.circle-shape {
-  pointer-events: none;
-}
-
-.semi-circle {
-  position: absolute;
-  width: 100px;
-  height: 200px;
-  box-sizing: border-box;
-  border: solid 6px;
-}
-
-.left-side {
-  top: 0;
-  left: 0;
-  transform-origin: right center;
-  transform: rotate(0deg);
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-right: none;
-  z-index: 1;
-}
-
-.right-side {
-  top: 0;
-  left: 100px;
-  transform-origin: left center;
-  transform: rotate(0deg);
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border-left: none;
-}
-
-.circle {
-  border-color: #bf5239;
-}
-
-.circle-mask {
-  border-color: #e85a71;
-}
-
- .app-counter-box {
-  font-family: 'Droid Sans Mono', monospace;
-  font-size: 250%;
-  position: relative;
-  top: 50px;
-  color: #d8e9ef;
+.app-counter-box p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #222;
 }
 
 button {
-  position: relative;
-  top: 50px;
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   border: none;
-  background: none;
-  outline: none;
-  color: #d8e9ef;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  color: white;
+}
+
+.btn-start {
+  background: #28a745;
+}
+
+.btn-pause {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-reset {
+  background: #dc3545; 
 }
 
 button:hover {
-  color: #90c0d1;
+  transform: scale(1.05);
+  opacity: 0.9;
 }
